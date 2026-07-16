@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RTC | مؤسسة رسملة التسويق للمقاولات</title>
+<meta name="description" content="مؤسسة رسملة التسويق للمقاولات - شريكك الموثوق في المقاولات الكهربائية والبنية التحتية بالمملكة العربية السعودية">
+<link rel="icon" href="img/logo.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@500;600;700&family=Tajawal:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===== خط الجهد الثابت (شريط تقدّم علوي) ===== -->
+<div class="volt-progress" id="voltProgress"></div>
+
+<!-- ===== الهيدر ===== -->
+<header class="site-header" id="siteHeader">
+  <div class="container header-inner">
+    <a href="#home" class="brand">
+      <img src="img/logo.png" alt="شعار RTC" class="brand-logo">
+      <span class="brand-text">
+        <strong>RTC</strong>
+        <em data-i18n="brand.sub">رسملة التسويق للمقاولات</em>
+      </span>
+    </a>
+
+    <nav class="main-nav" id="mainNav">
+      <ul>
+        <li><a href="#home" class="nav-link active" data-i18n="nav.home">الرئيسية</a></li>
+        <li><a href="#about" class="nav-link" data-i18n="nav.about">من نحن</a></li>
+        <li><a href="#services" class="nav-link" data-i18n="nav.services">خدماتنا</a></li>
+        <li><a href="#portfolio" class="nav-link" data-i18n="nav.portfolio">معرض الأعمال</a></li>
+        <li><a href="#partners" class="nav-link" data-i18n="nav.partners">شركاؤنا</a></li>
+        <li><a href="#contact" class="nav-link" data-i18n="nav.contact">اتصل بنا</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <a href="#contact" class="btn btn-primary btn-sm header-cta" data-i18n="nav.contact">اتصل بنا</a>
+      <button class="lang-switch" id="langSwitch" type="button" aria-label="Switch language">EN</button>
+      <button class="nav-toggle" id="navToggle" aria-label="فتح القائمة" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="home">
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="hero-grid" aria-hidden="true"></div>
+    <svg class="hero-lines" viewBox="0 0 1200 700" preserveAspectRatio="none" aria-hidden="true">
+      <path class="line line-1" d="M-50,120 C 250,60 450,220 750,140 S 1150,60 1300,160" />
+      <path class="line line-2" d="M-50,520 C 300,600 500,420 800,500 S 1150,600 1300,500" />
+    </svg>
+
+    <div class="container hero-inner">
+      <p class="eyebrow reveal" data-i18n="hero.eyebrow">مؤسسة رسملة التسويق للمقاولات <span class="dot">•</span> الرياض، السعودية</p>
+      <h1 class="hero-title reveal" data-i18n="hero.title">شريكك الموثوق<br>في <span class="accent-word">المقاولات</span></h1>
+      <p class="hero-sub reveal" data-i18n="hero.sub">نصنع مستقبلاً يجمع بين الإنجاز وقوة المقاولات — من التصميم إلى التسليم، بخبرة كهربائية وهندسية.</p>
+
+      <div class="hero-actions reveal">
+        <a href="#portfolio" class="btn btn-accent" data-i18n="hero.cta1">اكتشف مشاريعنا</a>
+        <a href="#services" class="btn btn-ghost" data-i18n="hero.cta2">خدماتنا</a>
+      </div>
+
+      <div class="hero-stats reveal">
+        <div class="stat">
+          <span class="stat-num" data-count="2013" data-plain="true">0</span>
+          <span class="stat-label" data-i18n="stat.founded">تأسست الشركة عام</span>
+        </div>
+        <span class="stat-sep" aria-hidden="true"></span>
+        <div class="stat">
+          <span class="stat-num" data-count="500">0</span><span class="stat-plus">+</span>
+          <span class="stat-label" data-i18n="stat.projects">مشروع منجز</span>
+        </div>
+        <span class="stat-sep" aria-hidden="true"></span>
+        <div class="stat">
+          <span class="stat-num" data-count="50">0</span><span class="stat-plus">+</span>
+          <span class="stat-label" data-i18n="stat.clients">عميل راضٍ</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== من نحن ===== -->
+  <section class="section" id="about">
+    <div class="container">
+      <p class="overline reveal" data-i18n="about.overline">تعرف علينا</p>
+      <h2 class="section-title reveal" data-i18n="about.title">من نحن</h2>
+
+      <div class="about-grid">
+        <article class="about-card reveal">
+          <h3 data-i18n="about.c1.h">عن الشركة</h3>
+          <p data-i18n="about.c1.p">رسملة التسويق للمقاولات، ومقرها المملكة العربية السعودية الرياض، تعد من الرواد في تقديم حلول مبتكرة ومخصصة في مجال المقاولات الكهربائية والبنية التحتية. مع التزامنا الصارم بالمبادئ الأخلاقية للعلاقات العامة وسعينا المستمر لتجاوز توقعات عملائنا، نقدم خدمات متنوعة تشمل المشاريع السكنية والتجارية والصناعية، وتوليد الطاقة، والسكك الحديدية، والمطارات، والمحطات الفرعية. نحن نتميز بخبرتنا العميقة واحترافية فريقنا، مما يمكننا من تقديم خدمات موثوقة وعالية الجودة تساهم في نجاح مشاريع عملائنا وتحقيق رضاهم الكامل.</p>
+        </article>
+
+        <article class="about-card reveal">
+          <h3 data-i18n="about.c2.h">رسالتنا</h3>
+          <p data-i18n="about.c2.p">في رسملة التسويق للمقاولات، نعتبر أن المنافسة الصعبة هي دافع لنا لتحقيق التميز. نحن فريق مخصص لتحقيق هدفنا في أن نصبح مقاولاً قوياً في مجال البناء العام والمقاولات. نحن فريق وموهوبون، وقادرون على تقديم خدمات احترافية بكفاءة وسرعة. هدفنا هو أن نكون مقاولاً كهربائياً فعالاً يعمل بطريقة أخلاقية ومتوازنة، مما يؤهلنا لنكون المنشأة الرائدة في خدمات الكهرباء.</p>
+        </article>
+
+        <article class="about-card reveal">
+          <h3 data-i18n="about.c3.h">رؤيتنا</h3>
+          <p data-i18n="about.c3.p">نسعى في رسملة التسويق للمقاولات إلى أن نكون الرواد في مجال المقاولات الكهربائية في المملكة العربية السعودية، من خلال تقديم حلول مبتكرة وخدمات عالية الجودة تلبي احتياجات عملائنا وتفوق توقعاتهم. نطمح إلى أن نكون مثالاً يُحتذى به في الالتزام بالأخلاق المهنية والابتكار والاستدامة.</p>
+        </article>
+      </div>
+
+      <!-- رسالة الرئيس التنفيذي -->
+      <div class="ceo-card reveal">
+        <div class="ceo-photo-wrap">
+          <img src="img/m.png" alt="سلطان بن فهد آل ظبيه - الرئيس التنفيذي" class="ceo-photo">
+        </div>
+        <div class="ceo-content">
+          <p class="overline" data-i18n="ceo.overline">رسالة الرئيس التنفيذي</p>
+          <p data-i18n="ceo.p1">تم تصميم نموذج العمل في منشأة رسملة التسويق للمقاولات من خلال التفكير الابتكاري والهندسة القوية والعمل الجماعي والمبدأ الأساسي للشفافية مع الموظفين وأصحاب المصلحة والعملاء.</p>
+          <p data-i18n="ceo.p2">استراتيجيتنا واضحة جداً، ونعتقد أنها ستمكننا من تحقيق طموحاتنا للنمو المستمر. لا يمكننا التنازل عن الجودة والسلامة في جميع مراحل المشروع.</p>
+          <p data-i18n="ceo.p3">من خلال تنفيذ هذه القيم والمبادئ كجزء من روتيننا اليومي، سنكون مبدعين في التفكير والعمل ونعمل باستمرار على تعزيز وتطوير قيمة هذه المنظمة.</p>
+          <p data-i18n="ceo.p4">مع فريق الإدارة المتحمس والطموح لدينا، قمنا بدمج المهندسين ذوي الخبرة مع الأساسيات القوية، والإبداع والطموح للسعي الاستراتيجي لنصبح واحدة من شركات المقاولات الرائدة في المملكة العربية السعودية. قوتنا الرئيسية هي الاستثمار في موظفينا على كل مستوى بحيث يتمكنون من اكتساب المزيد من المهارات المهنية العالية مع مرور كل يوم.</p>
+          <p data-i18n="ceo.p5">بفضل العمل الجماعي المحترف للغاية، نجحنا في تحقيق أهداف المنشأة وغاياتها، والتي لا تقتصر فقط على إكمال مشاريعنا بأمان وبجودة، وفي الوقت المحدد وضمن الميزانية، بل نضمن أيضاً الانسجام في كل خطوة نتخذها مع جميع أصحاب المصلحة والعملاء ونعتقد أن هذا هو مفتاح نجاحنا.</p>
+          <p class="ceo-signature" data-i18n="ceo.sign">سلطان بن فهد آل ظبيه<span>الرئيس التنفيذي</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== خدماتنا ===== -->
+  <section class="section section-tint" id="services">
+    <div class="container">
+      <p class="overline reveal" data-i18n="svc.overline">ما نقدمه</p>
+      <h2 class="section-title reveal" data-i18n="svc.title">خدماتنا</h2>
+
+      <div class="services-grid">
+        <article class="service-card reveal">
+          <div class="service-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48"><path d="M26 4 L10 28 H22 L20 44 L38 20 H26 Z"/></svg>
+          </div>
+          <h3 data-i18n="svc.c1.h">خدمات المقاولات الكهربائية</h3>
+          <p data-i18n="svc.c1.p">نقدم خدمات متكاملة في التعامل مع الجهد العالي والمتوسط وتوليد الطاقة.</p>
+          <ul>
+            <li data-i18n="svc.c1.l1">تقديم خدمات في المباني السكنية والتجارية</li>
+            <li data-i18n="svc.c1.l2">تقديم خدمات في المباني الصناعية</li>
+            <li data-i18n="svc.c1.l3">التعامل مع الجهد العالي/المتوسط وتوليد الطاقة</li>
+            <li data-i18n="svc.c1.l4">البنية التحتية الكهربائية في السكك الحديدية والمطارات والمحطات الفرعية</li>
+            <li data-i18n="svc.c1.l5">الأعمال المدنية والكهروميكانيكية</li>
+            <li data-i18n="svc.c1.l6">التعامل مع المحطات الفرعية للجهد العالي والمتوسط</li>
+            <li data-i18n="svc.c1.l7">التعاقد مع الشركة السعودية للكهرباء ضمن عقود التوزيع الموحدة</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary btn-sm service-cta" data-i18n="svc.cta">طلب استشارة وعرض سعر</a>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="service-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48"><path d="M6 40 L18 16 L24 26 L30 12 L42 40 Z"/></svg>
+          </div>
+          <h3 data-i18n="svc.c2.h">خدمات الحفر والكابلات الكهربائية</h3>
+          <p data-i18n="svc.c2.p">خدمات متخصصة في الحفر ووضع الكابلات تحت الأرض، مع خدمات التزفيت وربط المستهلكين، ضمن مشاريع بناء وإنشاء بمختلف أنواعها.</p>
+          <ul>
+            <li data-i18n="svc.c2.l1">الحفر ووضع الكابلات تحت الأرض وإنهاؤها</li>
+            <li data-i18n="svc.c2.l2">ربط المستهلكين وتركيب عدادات الطاقة الكهربائية</li>
+            <li data-i18n="svc.c2.l3">خدمات الأسفلت وغيرها</li>
+            <li data-i18n="svc.c2.l4">أعمال الحفر والتأسيس</li>
+            <li data-i18n="svc.c2.l5">أعمال الحفر والردم</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary btn-sm service-cta" data-i18n="svc.cta">طلب استشارة وعرض سعر</a>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="service-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="6"/><path d="M24 4 V12 M24 36 V44 M4 24 H12 M36 24 H44 M9 9 L14.5 14.5 M33.5 33.5 L39 39 M9 39 L14.5 33.5 M33.5 14.5 L39 9" stroke-width="2.5" stroke-linecap="round" fill="none"/></svg>
+          </div>
+          <h3 data-i18n="svc.c3.h">إدارة المشاريع</h3>
+          <p data-i18n="svc.c3.p">خدمات إدارة مشاريع احترافية تضمن إتمام مشروعك في الوقت المحدد وضمن الميزانية المرصودة، مع الحفاظ على أعلى معايير الجودة.</p>
+          <ul>
+            <li data-i18n="svc.c3.l1">التخطيط والجدولة الزمنية</li>
+            <li data-i18n="svc.c3.l2">إدارة التكاليف والميزانية</li>
+            <li data-i18n="svc.c3.l3">مراقبة الجودة والسلامة</li>
+            <li data-i18n="svc.c3.l4">تقارير دورية شاملة للعملاء</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary btn-sm service-cta" data-i18n="svc.cta">طلب استشارة وعرض سعر</a>
+        </article>
+      </div>
+
+      <!-- حلول متكاملة -->
+      <div class="solutions-block">
+        <div class="solutions-head reveal">
+          <h3 data-i18n="sol.h">حلول بناء متكاملة من البداية للنهاية</h3>
+          <p data-i18n="sol.p">من التصميم إلى التسليم، نرافقك في كل خطوة لضمان نجاح مشروعك</p>
+        </div>
+        <div class="solutions-grid">
+          <div class="solution-col reveal">
+            <h4 data-i18n="sol.c1.h">الخبرة الفنية</h4>
+            <p data-i18n="sol.c1.p">منشأة رسملة التسويق للمقاولات مجهزة بشكل جيد لتقديم موظفين مؤهلين للخدمة الفنية للعملاء، وتستفيد من خبرة واسعة. يمتلك معظم الموظفين خبرة دولية تتراوح بين خمس إلى سبع سنوات في مجالاتهم.</p>
+          </div>
+          <div class="solution-col reveal">
+            <h4 data-i18n="sol.c2.h">الإشراف</h4>
+            <p data-i18n="sol.c2.p">يتم تعيين مشرفين لكل وظيفة تُسند إلى RTC لضمان تنفيذ صحيح ومتوازٍ مع الجدول الزمني المحدد.</p>
+            <ul>
+              <li data-i18n="sol.c2.l1">الإشراف اليومي على جودة المهام المنجزة</li>
+              <li data-i18n="sol.c2.l2">التأكد من الالتزام بالجدول الزمني المحدد</li>
+              <li data-i18n="sol.c2.l3">إبقاء الإدارة على اطلاع دائم بجودة وأداء الأعمال</li>
+              <li data-i18n="sol.c2.l4">ضمان توزيع الإمدادات بشكل صحيح</li>
+              <li data-i18n="sol.c2.l5">متابعة متطلبات العمل لتحسين الجودة</li>
+            </ul>
+          </div>
+          <div class="solution-col reveal">
+            <h4 data-i18n="sol.c3.h">دور شركات المقاولات</h4>
+            <p data-i18n="sol.c3.p">تلعب شركات المقاولات دوراً حيوياً في تنفيذ رؤية المملكة العربية السعودية 2030.</p>
+            <ul>
+              <li data-i18n="sol.c3.l1">تطوير البنية التحتية والمشاريع الاقتصادية والاجتماعية</li>
+              <li data-i18n="sol.c3.l2">استخدام التقنيات الحديثة والحلول الذكية</li>
+              <li data-i18n="sol.c3.l3">تطوير المشاريع الرئيسية في مختلف القطاعات</li>
+              <li data-i18n="sol.c3.l4">توفير فرص العمل وتطوير المهارات الوطنية</li>
+              <li data-i18n="sol.c3.l5">نقل التكنولوجيا والمعرفة إلى المملكة</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== كيف نعمل ===== -->
+  <section class="section" id="process">
+    <div class="container">
+      <p class="overline reveal" data-i18n="proc.overline">كيف نعمل</p>
+      <h2 class="section-title reveal" data-i18n="proc.title">مراحل العمل لدينا</h2>
+      <p class="section-sub reveal" data-i18n="proc.sub">نتبع منهجية واضحة ومنظمة لضمان نجاح كل مشروع</p>
+
+      <div class="process-line">
+        <div class="process-step reveal">
+          <span class="step-num">01</span>
+          <h4 data-i18n="proc.s1.h">الاستشارة الأولية</h4>
+          <p data-i18n="proc.s1.p">نستمع لمتطلباتك ورؤيتك ونقدم مقترحاتنا الأولية</p>
+        </div>
+        <div class="process-step reveal">
+          <span class="step-num">02</span>
+          <h4 data-i18n="proc.s2.h">التصميم والتخطيط</h4>
+          <p data-i18n="proc.s2.p">إعداد التصاميم والمخططات والتقديرات المالية</p>
+        </div>
+        <div class="process-step reveal">
+          <span class="step-num">03</span>
+          <h4 data-i18n="proc.s3.h">توقيع العقد</h4>
+          <p data-i18n="proc.s3.p">اتفاق واضح وشامل يحدد جميع التفاصيل والمستحقات</p>
+        </div>
+        <div class="process-step reveal">
+          <span class="step-num">04</span>
+          <h4 data-i18n="proc.s4.h">التنفيذ</h4>
+          <p data-i18n="proc.s4.p">بدء العمل بكامل الطاقة مع مراقبة مستمرة للجودة</p>
+        </div>
+        <div class="process-step reveal">
+          <span class="step-num">05</span>
+          <h4 data-i18n="proc.s5.h">التسليم</h4>
+          <p data-i18n="proc.s5.p">تسليم المشروع كاملاً مع ضمان ما بعد التسليم</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== معرض الأعمال ===== -->
+  <section class="section section-tint" id="portfolio">
+    <div class="container">
+      <p class="overline reveal" data-i18n="port.overline">أعمالنا</p>
+      <h2 class="section-title reveal" data-i18n="port.title">معرض المشاريع</h2>
+      <p class="section-sub reveal" data-i18n="port.sub">مجموعة مختارة من المشاريع التي نفّذتها RTC على امتداد المملكة</p>
+
+      <div class="portfolio-marquee" id="portfolioMarquee"></div>
+    </div>
+  </section>
+
+  <!-- ===== شركاؤنا ===== -->
+  <section class="section" id="partners">
+    <div class="container">
+      <p class="overline reveal" data-i18n="part.overline">شركاء النجاح</p>
+      <h2 class="section-title reveal" data-i18n="part.title">شركاؤنا</h2>
+
+      <div class="partners-grid" id="partnersGrid"></div>
+    </div>
+  </section>
+
+  <!-- ===== اتصل بنا ===== -->
+  <section class="section section-dark" id="contact">
+    <div class="container">
+      <p class="overline overline-light reveal" data-i18n="cont.overline">تواصل معنا</p>
+      <h2 class="section-title title-light reveal" data-i18n="cont.title">اتصل بنا</h2>
+      <p class="section-sub sub-light reveal" data-i18n="cont.sub">نسعد بتواصلكم معنا لمناقشة مشاريعكم واحتياجاتكم</p>
+
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <div class="info-item">
+            <span class="info-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 2C7.6 2 4 5.6 4 10c0 5.6 8 12 8 12s8-6.4 8-12c0-4.4-3.6-8-8-8zm0 11a3 3 0 110-6 3 3 0 010 6z"/></svg>
+            </span>
+            <div><h4 data-i18n="cont.addrH">العنوان</h4><p data-i18n="cont.addrP">الرياض، المملكة العربية السعودية</p></div>
+          </div>
+          <div class="info-item">
+            <span class="info-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.9 21 3 13.1 3 3c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.2 1L6.6 10.8z"/></svg>
+            </span>
+            <div><h4 data-i18n="cont.phoneH">الهاتف</h4><p><a href="tel:+966500715099" dir="ltr">+966 50 071 5099</a></p></div>
+          </div>
+          <div class="info-item">
+            <span class="info-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M2 4h20v16H2V4zm2 2.3V18h16V6.3l-8 6-8-6zm.8-.3L12 12l7.2-6H4.8z"/></svg>
+            </span>
+            <div><h4 data-i18n="cont.mailH">البريد الإلكتروني</h4><p><a href="mailto:rtc@rtcco.org">rtc@rtcco.org</a></p></div>
+          </div>
+
+          <a href="tel:+966500715099" class="btn btn-accent call-now-btn">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.9 21 3 13.1 3 3c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.2 1L6.6 10.8z"/></svg>
+            <span data-i18n="cont.callBtn">اتصل الآن</span>
+          </a>
+        </div>
+
+        <form class="contact-form reveal" id="contactForm">
+          <div class="form-row">
+            <div class="field">
+              <label for="fName" data-i18n="form.name">الاسم</label>
+              <input type="text" id="fName" name="name" required placeholder="اسمك الكامل" data-i18n-ph="form.namePh">
+            </div>
+            <div class="field">
+              <label for="fPhone" data-i18n="form.phone">رقم الجوال</label>
+              <input type="tel" id="fPhone" name="phone" required placeholder="05xxxxxxxx">
+            </div>
+          </div>
+          <div class="field">
+            <label for="fEmail" data-i18n="form.email">البريد الإلكتروني</label>
+            <input type="email" id="fEmail" name="email" required placeholder="example@email.com">
+          </div>
+          <div class="field">
+            <label for="fService" data-i18n="form.service">الخدمة</label>
+            <select id="fService" name="service" required>
+              <option value="" disabled selected data-i18n="form.opt0">اختر الخدمة</option>
+              <option value="المقاولات العامة" data-i18n="form.opt1">المقاولات العامة</option>
+              <option value="إدارة المشاريع" data-i18n="form.opt2">إدارة المشاريع</option>
+              <option value="التوظيف" data-i18n="form.opt3">التوظيف</option>
+              <option value="الحلول الهندسية" data-i18n="form.opt4">الحلول الهندسية</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="fMessage" data-i18n="form.msg">الرسالة</label>
+            <textarea id="fMessage" name="message" rows="5" required placeholder="اكتب رسالتك هنا..." data-i18n-ph="form.msgPh"></textarea>
+          </div>
+          <button type="submit" class="btn btn-accent form-submit" id="formSubmitBtn" data-i18n="form.submit">إرسال الرسالة</button>
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+
+      <div class="map-wrap reveal">
+        <iframe
+          title="موقع RTC على الخريطة"
+          src="https://www.google.com/maps?q=%D9%85%D8%A4%D8%B3%D8%B3%D8%A9%20%D8%B1%D8%B3%D9%85%D9%84%D8%A9%20%D8%A7%D9%84%D8%AA%D8%B3%D9%88%D9%8A%D9%82%20%D9%84%D9%84%D9%85%D9%82%D8%A7%D9%88%D9%84%D8%A7%D8%AA%20%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%B6&t=&z=12&ie=UTF8&iwloc=&output=embed"
+          width="100%" height="420" style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+        <a class="map-link" href="https://maps.app.goo.gl/Ywe3mvpWedRdGsui8" target="_blank" rel="noopener" data-i18n="cont.map">فتح الموقع في خرائط جوجل ↗</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ===== الفوتر ===== -->
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <a href="#home" class="brand">
+      <img src="img/logo.png" alt="شعار RTC" class="brand-logo">
+      <span class="brand-text">
+        <strong>RTC</strong>
+        <em data-i18n="brand.sub">رسملة التسويق للمقاولات</em>
+      </span>
+    </a>
+    <ul class="footer-links">
+      <li><a href="#about" data-i18n="nav.about">من نحن</a></li>
+      <li><a href="#services" data-i18n="nav.services">خدماتنا</a></li>
+      <li><a href="#portfolio" data-i18n="nav.portfolio">معرض الأعمال</a></li>
+      <li><a href="#partners" data-i18n="nav.partners">شركاؤنا</a></li>
+      <li><a href="#contact" data-i18n="nav.contact">اتصل بنا</a></li>
+    </ul>
+    <p class="footer-copy">© <span id="year"></span> <span data-i18n="footer.copy">مؤسسة رسملة التسويق للمقاولات. جميع الحقوق محفوظة.</span></p>
+  </div>
+</footer>
+
+<!-- ===== نافذة عرض الصور (Lightbox) ===== -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightboxClose" aria-label="إغلاق">✕</button>
+  <button class="lightbox-nav prev" id="lightboxPrev" aria-label="السابق">‹</button>
+  <img src="" alt="" id="lightboxImg">
+  <button class="lightbox-nav next" id="lightboxNext" aria-label="التالي">›</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
