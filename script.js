@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
      - قاموس EN يحتوي الترجمة الإنجليزية فقط
      ========================================================== */
   const EN = {
-    'brand.sub': 'Rasmala Marketing Contracting',
+    'brand.sub': 'Rasmala Energy Contracting',
     'nav.home': 'Home',
     'nav.about': 'About Us',
     'nav.services': 'Our Services',
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
     'nav.partners': 'Our Partners',
     'nav.contact': 'Contact Us',
 
-    'hero.eyebrow': 'Rasmala Marketing Contracting Est. <span class="dot">•</span> Riyadh, Saudi Arabia',
+    'hero.eyebrow': 'Rasmala Energy Contracting Est. <span class="dot">•</span> Riyadh, Saudi Arabia',
     'hero.title': 'Your Trusted Partner<br>in <span class="accent-word">Contracting</span>',
     'hero.sub': 'We build a future that combines achievement with contracting strength — from design to delivery, backed by electrical and engineering expertise.',
     'hero.cta1': 'Explore Our Projects',
@@ -56,14 +56,14 @@ document.addEventListener('DOMContentLoaded', () => {
     'about.overline': 'Get to Know Us',
     'about.title': 'About Us',
     'about.c1.h': 'About the Company',
-    'about.c1.p': 'Rasmala Marketing Contracting, headquartered in Riyadh, Saudi Arabia, is a leading provider of innovative and tailored solutions in electrical contracting and infrastructure. With a strict commitment to ethical principles and a continuous drive to exceed our clients\u2019 expectations, we deliver a wide range of services covering residential, commercial and industrial projects, power generation, railways, airports and substations. We stand out through our deep expertise and the professionalism of our team, enabling us to provide reliable, high-quality services that contribute to the success of our clients\u2019 projects and their complete satisfaction.',
+    'about.c1.p': 'Rasmala Energy Contracting, headquartered in Riyadh, Saudi Arabia, is a leading provider of innovative and tailored solutions in electrical contracting and infrastructure. With a strict commitment to ethical principles and a continuous drive to exceed our clients\u2019 expectations, we deliver a wide range of services covering residential, commercial and industrial projects, power generation, railways, airports and substations. We stand out through our deep expertise and the professionalism of our team, enabling us to provide reliable, high-quality services that contribute to the success of our clients\u2019 projects and their complete satisfaction.',
     'about.c2.h': 'Our Mission',
-    'about.c2.p': 'At Rasmala Marketing Contracting, we see tough competition as a driver for excellence. We are a dedicated team working toward our goal of becoming a strong contractor in general construction and contracting. Our talented team is capable of delivering professional services efficiently and quickly. Our aim is to be an effective electrical contractor operating in an ethical and balanced manner, positioning us to become the leading establishment in electrical services.',
+    'about.c2.p': 'At Rasmala Energy Contracting, we see tough competition as a driver for excellence. We are a dedicated team working toward our goal of becoming a strong contractor in general construction and contracting. Our talented team is capable of delivering professional services efficiently and quickly. Our aim is to be an effective electrical contractor operating in an ethical and balanced manner, positioning us to become the leading establishment in electrical services.',
     'about.c3.h': 'Our Vision',
-    'about.c3.p': 'We strive at Rasmala Marketing Contracting to be pioneers in electrical contracting in the Kingdom of Saudi Arabia, by providing innovative solutions and high-quality services that meet our clients\u2019 needs and exceed their expectations. We aspire to be a role model in professional ethics, innovation and sustainability.',
+    'about.c3.p': 'We strive at Rasmala Energy Contracting to be pioneers in electrical contracting in the Kingdom of Saudi Arabia, by providing innovative solutions and high-quality services that meet our clients\u2019 needs and exceed their expectations. We aspire to be a role model in professional ethics, innovation and sustainability.',
 
     'ceo.overline': 'CEO Message',
-    'ceo.p1': 'The business model of Rasmala Marketing Contracting was designed around innovative thinking, strong engineering, teamwork, and the fundamental principle of transparency with employees, stakeholders and clients.',
+    'ceo.p1': 'The business model of Rasmala Energy Contracting was designed around innovative thinking, strong engineering, teamwork, and the fundamental principle of transparency with employees, stakeholders and clients.',
     'ceo.p2': 'Our strategy is very clear, and we believe it will enable us to achieve our ambitions for continuous growth. We cannot compromise on quality and safety at any stage of a project.',
     'ceo.p3': 'By implementing these values and principles as part of our daily routine, we will be creative in thought and action, continuously enhancing and developing the value of this organization.',
     'ceo.p4': 'With our enthusiastic and ambitious management team, we have combined experienced engineers with strong fundamentals, creativity and ambition in a strategic pursuit to become one of the leading contracting companies in Saudi Arabia. Our key strength is investing in our people at every level so they can gain more high-level professional skills with each passing day.',
@@ -99,9 +99,9 @@ document.addEventListener('DOMContentLoaded', () => {
     'sol.h': 'End-to-End Integrated Construction Solutions',
     'sol.p': 'From design to delivery, we accompany you at every step to ensure your project\u2019s success',
     'sol.c1.h': 'Technical Expertise',
-    'sol.c1.p': 'Rasmala Marketing Contracting is well equipped to provide qualified technical service staff to clients, drawing on extensive experience. Most of our staff have five to seven years of international experience in their fields.',
+    'sol.c1.p': 'Rasmala Energy Contracting is well equipped to provide qualified technical service staff to clients, drawing on extensive experience. Most of our staff have five to seven years of international experience in their fields.',
     'sol.c2.h': 'Supervision',
-    'sol.c2.p': 'Supervisors are assigned to every job entrusted to RTC to ensure proper execution in line with the set schedule.',
+    'sol.c2.p': 'Supervisors are assigned to every job entrusted to REC to ensure proper execution in line with the set schedule.',
     'sol.c2.l1': 'Daily supervision of the quality of completed tasks',
     'sol.c2.l2': 'Ensuring adherence to the set schedule',
     'sol.c2.l3': 'Keeping management constantly informed of work quality and performance',
@@ -130,7 +130,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     'port.overline': 'Our Work',
     'port.title': 'Project Gallery',
-    'port.sub': 'A curated selection of projects delivered by RTC across the Kingdom',
+    'port.sub': 'A curated selection of projects delivered by REC across the Kingdom',
 
     'part.overline': 'Success Partners',
     'part.title': 'Our Partners',
@@ -159,29 +159,29 @@ document.addEventListener('DOMContentLoaded', () => {
     'form.msgPh': 'Write your message here...',
     'form.submit': 'Send Message',
 
-    'footer.copy': 'Rasmala Marketing Contracting Est. All rights reserved.'
+    'footer.copy': 'Rasmala Energy Contracting Est. All rights reserved.'
   };
 
   const MESSAGES = {
     ar: {
-      title: 'RTC | مؤسسة رسملة التسويق للمقاولات',
+      title: 'REC | مؤسسة رسملة الطاقة للمقاولات',
       sending: 'جارٍ الإرسال...',
       submit: 'إرسال الرسالة',
       ok: '✓ تم إرسال رسالتك بنجاح، سنتواصل معك قريباً.',
       err: 'حدث خطأ أثناء الإرسال، حاول مرة أخرى أو تواصل معنا هاتفياً.',
       net: 'تعذّر الاتصال بالخادم، تحقق من اتصالك بالإنترنت وحاول مجدداً.',
       project: (n) => `مشروع ${n}`,
-      projectAlt: (n) => `مشروع RTC رقم ${n}`
+      projectAlt: (n) => `مشروع REC رقم ${n}`
     },
     en: {
-      title: 'RTC | Rasmala Marketing Contracting Est.',
+      title: 'REC | Rasmala Energy Contracting Est.',
       sending: 'Sending...',
       submit: 'Send Message',
       ok: '✓ Your message has been sent successfully. We will contact you soon.',
       err: 'An error occurred while sending. Please try again or contact us by phone.',
       net: 'Could not reach the server. Check your internet connection and try again.',
       project: (n) => `Project ${n}`,
-      projectAlt: (n) => `RTC Project No. ${n}`
+      projectAlt: (n) => `REC Project No. ${n}`
     }
   };
 
