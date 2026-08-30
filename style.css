@@ -3,26 +3,28 @@
    Design tokens: deep violet brand + metallic amber "voltage" accent
    ========================================================= */
 :root{
-  --c-primary:#442c72;      /* بنفسجي داكن - العلامة الأساسية */
-  --c-primary-2:#6642b9;    /* بنفسجي فاتح - العلامة الثانوية */
-  --c-primary-dark:#2c1c4d; /* بنفسجي أعمق للتدرجات */
-  --c-accent:#c9973e;       /* ذهبي معدني - لمسة "الجهد الكهربائي" */
+  --c-primary:#33383d;      /* رمادي-أنثراسايت داكن - مأخوذ من الوجه الأيمن للوقو REC */
+  --c-primary-2:#565f66;    /* رمادي فولاذي فاتح - العلامة الثانوية */
+  --c-primary-dark:#191b1d; /* شبه أسود للتدرجات العميقة */
+  --c-accent:#c9973e;       /* ذهبي معدني - نفس ذهبي شعار REC */
   --c-accent-light:#e3b968;
-  --c-ink:#1c1626;          /* شبه أسود بنفسجي - نصوص وخلفيات داكنة */
-  --c-paper:#faf9fc;        /* خلفية فاتحة */
-  --c-paper-tint:#f1eef8;   /* خلفية فاتحة بلمسة بنفسجية */
-  --c-text:#2c2438;
-  --c-muted:#6c6478;
-  --c-line:#e4dff0;
+  --c-olive:#5b4a1e;        /* زيتي-برونزي - مأخوذ من الوجه الأيسر للوقو REC */
+  --c-olive-light:#8a7233;
+  --c-ink:#17181a;          /* شبه أسود دافئ - نصوص وخلفيات داكنة */
+  --c-paper:#faf8f5;        /* خلفية فاتحة دافئة (كريمي) */
+  --c-paper-tint:#f0ece1;   /* خلفية فاتحة بلمسة بيج مأخوذة من الوجه العلوي للوقو */
+  --c-text:#292b2d;
+  --c-muted:#726b5e;
+  --c-line:#e2ddd0;
 
   --font-display:'El Messiri', 'Tajawal', sans-serif;
   --font-body:'Tajawal', sans-serif;
 
   --radius:14px;
   --radius-lg:22px;
-  --shadow-sm:0 2px 10px rgba(28,22,38,.06);
-  --shadow-md:0 12px 30px rgba(44,28,77,.12);
-  --shadow-lg:0 24px 60px rgba(28,22,38,.18);
+  --shadow-sm:0 2px 10px rgba(23,24,26,.07);
+  --shadow-md:0 12px 30px rgba(23,24,26,.14);
+  --shadow-lg:0 24px 60px rgba(23,24,26,.2);
   --ease:cubic-bezier(.22,.61,.36,1);
 }
 
@@ -97,13 +99,13 @@ p{margin:0;}
 /* ================= HEADER ================= */
 .site-header{
   position:fixed; inset-inline:0; top:0; z-index:900;
-  background:rgba(250,249,252,.7);
+  background:rgba(250,248,245,.7);
   backdrop-filter:blur(14px) saturate(140%);
   border-bottom:1px solid transparent;
   transition:background .3s var(--ease), border-color .3s var(--ease), box-shadow .3s var(--ease);
 }
 .site-header.scrolled{
-  background:rgba(250,249,252,.92);
+  background:rgba(250,248,245,.92);
   border-color:var(--c-line);
   box-shadow:var(--shadow-sm);
 }
@@ -316,7 +318,7 @@ p{margin:0;}
 .service-card:hover{transform:translateY(-6px); box-shadow:var(--shadow-md); border-color:var(--c-primary-2);}
 .service-icon{
   width:58px; height:58px; border-radius:16px; margin-bottom:22px;
-  background:linear-gradient(135deg,var(--c-primary-2),var(--c-primary));
+  background:linear-gradient(135deg,var(--c-primary-2),var(--c-primary-dark));
   display:flex; align-items:center; justify-content:center;
   flex-shrink:0;
 }
@@ -349,7 +351,7 @@ p{margin:0;}
 .solution-col{
   padding:28px; border-radius:var(--radius); background:#fff; border:1px solid var(--c-line);
 }
-.solution-col h4{font-size:1.1rem; margin-bottom:12px; color:var(--c-primary-2);}
+.solution-col h4{font-size:1.1rem; margin-bottom:12px; color:var(--c-olive);}
 .solution-col p{color:var(--c-muted); font-size:.93rem; margin-bottom:14px;}
 .solution-col ul{display:flex; flex-direction:column; gap:8px;}
 .solution-col li{position:relative; padding-inline-start:20px; font-size:.88rem; color:var(--c-text);}
@@ -372,7 +374,7 @@ p{margin:0;}
 .step-num{
   display:inline-flex; align-items:center; justify-content:center;
   width:54px; height:54px; border-radius:50%;
-  background:linear-gradient(135deg,var(--c-primary-2),var(--c-primary));
+  background:linear-gradient(135deg,var(--c-olive),var(--c-primary-dark));
   color:var(--c-accent-light);
   font-family:var(--font-display); font-weight:700; font-size:1.1rem;
   margin-bottom:18px; position:relative; z-index:1;
@@ -410,7 +412,7 @@ p{margin:0;}
   z-index:2;
   width:46px; height:46px; border-radius:50%;
   border:1px solid rgba(255,255,255,.35);
-  background:rgba(44,28,77,.75);
+  background:rgba(23,24,26,.75);
   backdrop-filter:blur(4px);
   color:#fff; font-size:1.6rem; line-height:1;
   display:flex; align-items:center; justify-content:center;
@@ -552,7 +554,7 @@ p{margin:0;}
 /* ================= LIGHTBOX ================= */
 .lightbox{
   position:fixed; inset:0; z-index:1100;
-  background:rgba(15,10,22,.94);
+  background:rgba(15,14,12,.95);
   display:flex; align-items:center; justify-content:center;
   opacity:0; visibility:hidden; transition:opacity .3s var(--ease);
   padding:40px;
