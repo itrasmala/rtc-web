@@ -391,5 +391,112 @@
 </div>
 
 <script src="script.js"></script>
+<!--ادوات الوصول  -->
+
+<!-- ============================================================
+     أداة إمكانية الوصول (Accessibility Widget)
+     الصق هذا الكود قبل إغلاق وسم </body> في صفحاتك
+     تأكد من ربط accessibility-widget.css في <head>
+     وربط accessibility-widget.js قبل إغلاق </body> بعد هذا الكود
+     ============================================================ -->
+
+<div id="moi-accessibility-widget">
+  <button type="button" class="moi-a11y-widget__trigger" aria-label="فتح أدوات إمكانية الوصول" aria-expanded="false" aria-controls="moi-a11y-panel">
+    <svg class="moi-a11y-icon" width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+      <path d="M16 7C17.9312 7 19.5 5.43125 19.5 3.5C19.5 1.56875 17.9312 0 16 0C14.0688 0 12.5 1.56875 12.5 3.5C12.5 5.43125 14.0688 7 16 7Z" fill="currentColor"></path>
+      <path d="M26.9999 7.05L26.9687 7.05625L26.9437 7.0625C26.8812 7.08125 26.8187 7.1 26.7562 7.11875C25.5937 7.4625 19.9499 9.05 15.9687 9.05C12.2749 9.05 7.1374 7.675 5.49365 7.20625C5.33115 7.14375 5.1624 7.0875 4.99365 7.04375C3.80615 6.73125 2.99365 7.9375 2.99365 9.0375C2.99365 10.1313 3.9749 10.65 4.9624 11.025V11.0438L10.9124 12.9C11.5187 13.1313 11.6812 13.3688 11.7624 13.575C12.0187 14.2375 11.8124 15.55 11.7437 16.0063L11.3812 18.8188L9.3749 29.8375C9.36865 29.8687 9.3624 29.9 9.35615 29.9312L9.34365 30.0125C9.1999 31.0188 9.9374 32 11.3437 32C12.5687 32 13.1124 31.1563 13.3437 30.0063C13.3437 30.0063 15.0937 20.1563 15.9687 20.1563C16.8437 20.1563 18.6437 30.0063 18.6437 30.0063C18.8812 31.1563 19.4187 32 20.6437 32C22.0499 32 22.7937 31.0188 22.6437 30.0063C22.6312 29.9188 22.6124 29.8375 22.5937 29.75L20.5624 18.8313L20.1999 16.0188C19.9374 14.3813 20.1499 13.8375 20.2187 13.7125C20.2187 13.7125 20.2249 13.7063 20.2249 13.7C20.2937 13.575 20.5999 13.2938 21.3187 13.025L26.8999 11.075C26.9312 11.0688 26.9687 11.0563 26.9999 11.0438C27.9999 10.6688 28.9999 10.15 28.9999 9.05C28.9999 7.95 28.1874 6.7375 26.9999 7.05Z" fill="currentColor"></path>
+    </svg>
+  </button>
+
+  <div id="moi-a11y-panel" class="moi-a11y-panel" role="dialog" aria-modal="false" aria-label="أدوات إمكانية الوصول" hidden>
+    <div class="moi-a11y-panel__header">
+      <h2 class="moi-a11y-panel__title">أدوات إمكانية الوصول</h2>
+      <button type="button" class="moi-a11y-panel__close" aria-label="إغلاق لوحة إمكانية الوصول">&times;</button>
+    </div>
+
+    <div class="moi-a11y-panel__body">
+      <div class="moi-a11y-group" role="group" aria-label="حجم الخط">
+        <span class="moi-a11y-group__label">حجم الخط</span>
+        <div class="moi-a11y-row">
+          <button type="button" class="moi-a11y-btn" data-action="font-dec" aria-label="تصغير الخط">A-</button>
+          <button type="button" class="moi-a11y-btn" data-action="font-reset" aria-label="إعادة حجم الخط الافتراضي">A</button>
+          <button type="button" class="moi-a11y-btn" data-action="font-inc" aria-label="تكبير الخط">A+</button>
+        </div>
+      </div>
+
+      <button type="button" class="moi-a11y-toggle" data-toggle="contrast">
+        <span class="moi-a11y-toggle__icon" aria-hidden="true">◐</span>
+        <span>تباين عالٍ</span>
+      </button>
+
+      <button type="button" class="moi-a11y-toggle" data-toggle="grayscale">
+        <span class="moi-a11y-toggle__icon" aria-hidden="true">⬤</span>
+        <span>تدرج رمادي</span>
+      </button>
+
+      <button type="button" class="moi-a11y-toggle" data-toggle="underline-links">
+        <span class="moi-a11y-toggle__icon" aria-hidden="true">U̲</span>
+        <span>تسطير الروابط</span>
+      </button>
+
+      <button type="button" class="moi-a11y-toggle" data-toggle="readable-font">
+        <span class="moi-a11y-toggle__icon" aria-hidden="true">Aa</span>
+        <span>خط أسهل للقراءة</span>
+      </button>
+
+      <button type="button" class="moi-a11y-toggle" data-toggle="big-cursor">
+        <span class="moi-a11y-toggle__icon" aria-hidden="true">➤</span>
+        <span>مؤشر أكبر</span>
+      </button>
+
+      <button type="button" class="moi-a11y-toggle" data-toggle="stop-animations">
+        <span class="moi-a11y-toggle__icon" aria-hidden="true">⏸</span>
+        <span>إيقاف الحركة والتأثيرات</span>
+      </button>
+
+      <button type="button" class="moi-a11y-toggle" data-toggle="reading-guide">
+        <span class="moi-a11y-toggle__icon" aria-hidden="true">▬</span>
+        <span>خط توجيه القراءة</span>
+      </button>
+
+      <button type="button" class="moi-a11y-toggle" data-toggle="low-vision">
+        <span class="moi-a11y-toggle__icon" aria-hidden="true">👁</span>
+        <span>ضعف البصر</span>
+      </button>
+
+      <button type="button" class="moi-a11y-toggle" data-toggle="reading-difficulty">
+        <span class="moi-a11y-toggle__icon" aria-hidden="true">📖</span>
+        <span>صعوبات القراءة</span>
+      </button>
+
+      <button type="button" class="moi-a11y-toggle" data-toggle="focus-mode">
+        <span class="moi-a11y-toggle__icon" aria-hidden="true">🎯</span>
+        <span>وضع التركيز</span>
+      </button>
+
+      <button type="button" class="moi-a11y-toggle" data-toggle="reduce-motion">
+        <span class="moi-a11y-toggle__icon" aria-hidden="true">🐢</span>
+        <span>تقليل الحركة</span>
+      </button>
+
+      <button type="button" class="moi-a11y-reset" data-action="reset-all">
+        إعادة تعيين كل الإعدادات
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="moi-a11y-reading-line" aria-hidden="true"></div>
+<div class="moi-a11y-focus-mask moi-a11y-focus-mask--top" aria-hidden="true"></div>
+<div class="moi-a11y-focus-mask moi-a11y-focus-mask--bottom" aria-hidden="true"></div>
+
+
 </body>
 </html>
+
+
+
+
+<!--ادوات الوصول  -->
+
+
