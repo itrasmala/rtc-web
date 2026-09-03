@@ -438,3 +438,151 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
+
+
+
+
+
+
+
+
+
+/* ============================================================
+   أداة إمكانية الوصول - ملف الجافاسكربت (JS)
+   اربط هذا الملف قبل إغلاق </body> بعد كود HTML الخاص بالأداة:
+   <script src="accessibility-widget.js"></script>
+   ============================================================ */
+
+document.addEventListener('DOMContentLoaded', function(){
+  var root = document.documentElement;
+  var trigger = document.querySelector('#moi-accessibility-widget .moi-a11y-widget__trigger');
+  var panel = document.getElementById('moi-a11y-panel');
+  var closeBtn = document.querySelector('.moi-a11y-panel__close');
+  var readingLine = document.querySelector('.moi-a11y-reading-line');
+  var focusMaskTop = document.querySelector('.moi-a11y-focus-mask--top');
+  var focusMaskBottom = document.querySelector('.moi-a11y-focus-mask--bottom');
+  var FOCUS_WINDOW = 160; // ارتفاع منطقة التركيز الواضحة حول المؤشر
+  var STORAGE_KEY = 'moi-a11y-settings';
+
+  if (!trigger || !panel) return; // الأداة غير موجودة في هذه الصفحة
+
+  var FONT_STEP = 0.1;   // نسبة تكبير/تصغير الخط
+  var FONT_MAX = 1.5;
+  var FONT_MIN = 0.8;
+  var fontScale = 1;
+
+  function loadSettings(){
+    try {
+      var raw = localStorage.getItem(STORAGE_KEY);
+      return raw ? JSON.parse(raw) : {};
+    } catch(e){ return {}; }
+  }
+  function saveSettings(settings){
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(settings)); } catch(e){}
+  }
+  function getSettings(){
+    var toggles = document.querySelectorAll('.moi-a11y-toggle');
+    var settings = { fontScale: fontScale };
+    toggles.forEach(function(btn){
+      settings[btn.dataset.toggle] = btn.getAttribute('aria-pressed') === 'true';
+    });
+    return settings;
+  }
+
+  function applyFontScale(){
+    root.style.fontSize = (16 * fontScale) + 'px';
+  }
+
+  function openPanel(){
+    panel.hidden = false;
+    trigger.setAttribute('aria-expanded', 'true');
+    var firstFocusable = panel.querySelector('button');
+    if (firstFocusable) firstFocusable.focus();
+    document.addEventListener('keydown', onKeydown);
+    document.addEventListener('click', onOutsideClick, true);
+  }
+  function closePanel(){
+    panel.hidden = true;
+    trigger.setAttribute('aria-expanded', 'false');
+    trigger.focus();
+    document.removeEventListener('keydown', onKeydown);
+    document.removeEventListener('click', onOutsideClick, true);
+  }
+  function onKeydown(e){
+    if (e.key === 'Escape') closePanel();
+  }
+  function onOutsideClick(e){
+    if (!panel.contains(e.target) && e.target !== trigger) closePanel();
+  }
+
+  trigger.addEventListener('click', function(){
+    panel.hidden ? openPanel() : closePanel();
+  });
+  closeBtn.addEventListener('click', closePanel);
+
+  document.querySelector('[data-action="font-inc"]').addEventListener('click', function(){
+    fontScale = Math.min(FONT_MAX, +(fontScale + FONT_STEP).toFixed(2));
+    applyFontScale(); saveSettings(getSettings());
+  });
+  document.querySelector('[data-action="font-dec"]').addEventListener('click', function(){
+    fontScale = Math.max(FONT_MIN, +(fontScale - FONT_STEP).toFixed(2));
+    applyFontScale(); saveSettings(getSettings());
+  });
+  document.querySelector('[data-action="font-reset"]').addEventListener('click', function(){
+    fontScale = 1;
+    applyFontScale(); saveSettings(getSettings());
+  });
+
+  var toggles = document.querySelectorAll('.moi-a11y-toggle');
+  toggles.forEach(function(btn){
+    btn.setAttribute('aria-pressed', 'false');
+    btn.addEventListener('click', function(){
+      var isPressed = btn.getAttribute('aria-pressed') === 'true';
+      btn.setAttribute('aria-pressed', String(!isPressed));
+      root.classList.toggle('moi-a11y-' + btn.dataset.toggle, !isPressed);
+      saveSettings(getSettings());
+    });
+  });
+
+  document.querySelector('[data-action="reset-all"]').addEventListener('click', function(){
+    fontScale = 1;
+    applyFontScale();
+    toggles.forEach(function(btn){
+      btn.setAttribute('aria-pressed', 'false');
+      root.classList.remove('moi-a11y-' + btn.dataset.toggle);
+    });
+    localStorage.removeItem(STORAGE_KEY);
+  });
+
+  // خط توجيه القراءة ووضع التركيز يتبعان المؤشر عند تفعيلهما
+  document.addEventListener('mousemove', function(e){
+    if (root.classList.contains('moi-a11y-reading-guide')){
+      readingLine.style.top = (e.clientY - 17) + 'px';
+    }
+    if (root.classList.contains('moi-a11y-focus-mode')){
+      var half = FOCUS_WINDOW / 2;
+      var topHeight = Math.max(0, e.clientY - half);
+      var bottomTop = e.clientY + half;
+      focusMaskTop.style.height = topHeight + 'px';
+      focusMaskBottom.style.top = bottomTop + 'px';
+      focusMaskBottom.style.height = Math.max(0, window.innerHeight - bottomTop) + 'px';
+    }
+  });
+
+  // استرجاع الإعدادات المحفوظة عند تحميل الصفحة
+  (function restore(){
+    var saved = loadSettings();
+    if (typeof saved.fontScale === 'number'){
+      fontScale = saved.fontScale;
+      applyFontScale();
+    }
+    toggles.forEach(function(btn){
+      var key = btn.dataset.toggle;
+      if (saved[key]){
+        btn.setAttribute('aria-pressed', 'true');
+        root.classList.add('moi-a11y-' + key);
+      }
+    });
+  })();
+});
